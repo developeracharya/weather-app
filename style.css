@@ -58,18 +58,20 @@
 
  }
  .big-container{
-    width: 50%;
+    width: 75%;
+    position: relative;
+    right: 14%;
     /* height: 50%; */
     margin: 3% 25% ;
     padding: 7% 0 0 0;
-    background-image: url(../weather/background-pic.png);
+    background-image: url(background-pic.png);
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 2%;
  }
  #weather-container{
    position: relative;
-   left: 18rem;
+   left: 35%;
    width: 30%;
    margin: 0;
    text-align: center;
@@ -90,12 +92,12 @@ f''(x) = -sin(x) =====> f''(0) = -sin(0) = 0
     font-size: 100%;
  }
  .humidity-pic{
-    width: 15%;
-    height: 15%;
+    width: 25%;
+    height: 25%;
  }
  #pressure-container{
    position: relative;
-   bottom: 10rem; 
+   bottom: 8rem; 
    left: 20%;
     margin: 0;
     width: 30%;
@@ -103,25 +105,25 @@ f''(x) = -sin(x) =====> f''(0) = -sin(0) = 0
    text-align: center;
  }
  .pressure-pic{
-    width: 15%;
-    height: 15%;
+    width: 25%;
+    height: 25%;
  }
  #sun-container{
     position: relative;
-     bottom: 41.3rem ;
-     left: 1.5rem;
+     bottom: 47rem ;
+     left: 0rem;
     /* margin: 0;  */ 
-    width: 30%;
+    width: 35%;
    text-align: center;
    font-size: 100%;
  }
  .sun-img{ 
-    width: 18%;
-    height: 30%;
+    width: 25%;
+    height: 40%;
  }
  #temperature-container{
     position: relative;
-     bottom: 13.2rem;
+     bottom: 13rem;
      left: 67%;
     /* margin: 0;  */ 
     width: 30%;
@@ -129,6 +131,6 @@ f''(x) = -sin(x) =====> f''(0) = -sin(0) = 0
    font-size: 100%;
  }
  .temperature-img{
-    width: 24%;
-    height: 45%;
+    width: 35%;
+    height: 40%;
  }
