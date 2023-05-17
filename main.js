@@ -46,6 +46,27 @@ btnEl.addEventListener("click", () => {
   fetchData(root);
 });
 
+addEventListener("keypress", (event) => {
+  console.log(event);
+  if(event.key == "Enter"){
+    if (
+      searchEl.value.includes(" ") &&
+      searchEl.value.toLowerCase() != "new york"
+    ) {
+      nameList = searchEl.value.split(" "); // [el, paso]
+      searchEl.value = nameList.join("-"); // el-paso
+    } else if (searchEl.value.toLowerCase() == "new york") {
+      searchEl.value = searchEl.value;
+    } else {
+      searchEl.value = searchEl.value;
+    }
+  
+    root = `https://api.openweathermap.org/data/2.5/weather?q=${searchEl.value}&appid=00106a4142467451f98689215258b121`;
+    console.log(root);
+    fetchData(root);
+  }
+
+});
 // FUNCTION TO RENDER DATA FETCHED FROM API
 const renderData = (data) => {
   localStorage.setItem("weather-data", JSON.stringify(data));
