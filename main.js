@@ -28,7 +28,8 @@ const fetchData = (url) => {
 // DEFAULT SHOW WHILE OPENING
 fetchData(defaultRoot);
 
-btnEl.addEventListener("click", () => {
+///  MAKES ROOT URL AND CALLS FETCH DATA FUNTION -------------
+const rootReturn = () => {
   if (
     searchEl.value.includes(" ") &&
     searchEl.value.toLowerCase() != "new york"
@@ -44,28 +45,15 @@ btnEl.addEventListener("click", () => {
   root = `https://api.openweathermap.org/data/2.5/weather?q=${searchEl.value}&appid=00106a4142467451f98689215258b121`;
   console.log(root);
   fetchData(root);
-});
+};
+
+btnEl.addEventListener("click", rootReturn);
 
 addEventListener("keypress", (event) => {
   console.log(event);
-  if(event.key == "Enter"){
-    if (
-      searchEl.value.includes(" ") &&
-      searchEl.value.toLowerCase() != "new york"
-    ) {
-      nameList = searchEl.value.split(" "); // [el, paso]
-      searchEl.value = nameList.join("-"); // el-paso
-    } else if (searchEl.value.toLowerCase() == "new york") {
-      searchEl.value = searchEl.value;
-    } else {
-      searchEl.value = searchEl.value;
-    }
-  
-    root = `https://api.openweathermap.org/data/2.5/weather?q=${searchEl.value}&appid=00106a4142467451f98689215258b121`;
-    console.log(root);
-    fetchData(root);
+  if (event.key == "Enter") {
+    rootReturn();
   }
-
 });
 // FUNCTION TO RENDER DATA FETCHED FROM API
 const renderData = (data) => {
@@ -75,7 +63,7 @@ const renderData = (data) => {
   const date = new Date(dt * 1000).toLocaleDateString("en-US");
   const sunSetTime = new Date(sys.sunset * 1000).toLocaleTimeString("en-US");
   const sunRiseTime = new Date(sys.sunrise * 1000).toLocaleTimeString("en-US");
-  if(containerEl.style.color == "red"){
+  if (containerEl.style.color == "red") {
     containerEl.style.color = "";
   }
 
