@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+ body{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #FFF9DE;
+    font-size: 1rem;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(140,179,160,1) 0%, rgba(126,182,170,1) 31%, rgba(0,212,255,1) 100%);
+} 
+ h1{
+    font-size: 300%;
+    font-family: sans-serif;
+    color: #3C486B;
+ }
+ h2{
+   color: #fff;
+   font-size: 250%;
+ }
+ p{
+    font-size: 150%;
+ }
+ #search{
+    width: 30%;
+    height : 2.5rem;
+    border-radius: 8px;
+    font-size: 2rem;
+    margin-bottom: 7%;
+    background-color: Transparent;
+    border: solid;
+    color: #212A3E;
+    border-color: #212A3E;
+    border-width: 1px;
+ }
+ #search:focus{
+         outline: none;
+    
+ }
+ .btn{
+   position: relative;
+   bottom: .2rem;
+    height : 3rem;
+    border-radius: 8px;
+    width: 15%;
+    color: #212A3E;
+    font-size: 1.5rem;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: solid;
+    border-width: 1px;
+    cursor:pointer;
+    overflow: hidden;       
+    
+
+ }
+ .btn:hover{
+   background-color: #fff;
+
+ }
+ .big-container{
+    width: 50%;
+    /* height: 50%; */
+    margin: 3% 25% ;
+    padding: 7% 0 0 0;
+    background-image: url(../weather/background-pic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2%;
+ }
+ #weather-container{
+   position: relative;
+   left: 18rem;
+   width: 30%;
+   margin: 0;
+   text-align: center;
+ }
+ /*
+ f(x) = f(x0) + (x-x0) f'(x0) + (x-x0)^2 f''(x0) / 2! + ........
+ f(x) = sin(x) ------> f(0) = sin(0) = 0
+f'(x) = cos(x) ------> f'(0) = cos(0) = 1
+f''(x) = -sin(x) =====> f''(0) = -sin(0) = 0 
+ */
+ #humidity-container{
+    position: relative;
+    bottom: 18rem;
+    left: 50%;
+     margin: 0;
+     width: 30%;
+    text-align: center;
+    font-size: 100%;
+ }
+ .humidity-pic{
+    width: 15%;
+    height: 15%;
+ }
+ #pressure-container{
+   position: relative;
+   bottom: 10rem; 
+   left: 20%;
+    margin: 0;
+    width: 30%;
+    font-size: 100%;
+   text-align: center;
+ }
+ .pressure-pic{
+    width: 15%;
+    height: 15%;
+ }
+ #sun-container{
+    position: relative;
+     bottom: 41.3rem ;
+     left: 1.5rem;
+    /* margin: 0;  */ 
+    width: 30%;
+   text-align: center;
+   font-size: 100%;
+ }
+ .sun-img{ 
+    width: 18%;
+    height: 30%;
+ }
+ #temperature-container{
+    position: relative;
+     bottom: 13.2rem;
+     left: 67%;
+    /* margin: 0;  */ 
+    width: 30%;
+   text-align: center;
+   font-size: 100%;
+ }
+ .temperature-img{
+    width: 24%;
+    height: 45%;
+ }
