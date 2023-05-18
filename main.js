@@ -30,6 +30,7 @@ fetchData(defaultRoot);
 
 ///  MAKES ROOT URL AND CALLS FETCH DATA FUNTION -------------
 const rootReturn = () => {
+  searchEl.value = searchEl.value.trim();
   if (
     searchEl.value.includes(" ") &&
     searchEl.value.toLowerCase() != "new york"
